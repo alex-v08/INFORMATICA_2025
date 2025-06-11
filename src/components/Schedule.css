@@ -1,0 +1,168 @@
+.schedule {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.schedule-title {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.schedule-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.summary-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+}
+
+.summary-card svg {
+  color: #2a5298;
+  flex-shrink: 0;
+}
+
+.summary-card h3 {
+  color: #1e3c72;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.summary-card p {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.schedule-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.schedule-header h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.schedule-header h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.schedule-content {
+  padding: 1.5rem;
+}
+
+.day-schedule {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  border-left: 4px solid #2a5298;
+}
+
+.day-schedule.saturday {
+  border-left-color: #28a745;
+}
+
+.day-schedule h5 {
+  color: #1e3c72;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.day-schedule .time {
+  color: #2a5298;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.day-schedule .content {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.day-schedule:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos especiales para sesiones sin actividad */
+.schedule-card .day-schedule .time:contains("-") {
+  color: #6c757d;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding: 1rem;
+  }
+  
+  .schedule-title {
+    font-size: 2rem;
+  }
+  
+  .schedule-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-card {
+    padding: 1rem;
+  }
+  
+  .schedule-header {
+    padding: 1rem;
+  }
+  
+  .schedule-content {
+    padding: 1rem;
+  }
+}
